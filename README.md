@@ -5,5 +5,5 @@ Personal Project : CRM (Customer Relationship Management)
 Implementation of CRM Backend using ASP.net core 
 
 # To run project
-docker build -t your_image_name .
+docker build -t your_image_name . <br/>
 docker run -d -p 8080:80 --name your_container_name your_image_name
