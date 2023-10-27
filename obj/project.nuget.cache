@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "asjgR8fQAh4dDbiUuXQIyF5L0/ptAcVtXnJzBUIjUpDjbPhORCwwCgNDpGEIal3w9MbwqLO9pTq3ikRjgMJcJA==",
+  "success": true,
+  "projectFilePath": "/Users/muiz_eddy/Documents/personalProject/CRM-CLONE/backend/crmbackend/crmbackend.csproj",
+  "expectedPackageFiles": [
+    "/Users/muiz_eddy/.nuget/packages/microsoft.aspnetcore.openapi/7.0.12/microsoft.aspnetcore.openapi.7.0.12.nupkg.sha512",
+    "/Users/muiz_eddy/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "/Users/muiz_eddy/.nuget/packages/microsoft.openapi/1.4.3/microsoft.openapi.1.4.3.nupkg.sha512",
+    "/Users/muiz_eddy/.nuget/packages/swashbuckle.aspnetcore/6.5.0/swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
+    "/Users/muiz_eddy/.nuget/packages/swashbuckle.aspnetcore.swagger/6.5.0/swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
+    "/Users/muiz_eddy/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.5.0/swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
+    "/Users/muiz_eddy/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.5.0/swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
