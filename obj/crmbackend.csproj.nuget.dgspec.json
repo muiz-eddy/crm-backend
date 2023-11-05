@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/muiz_eddy/Documents/personalProject/CRM-CLONE/backend/crmbackend/crmbackend.csproj": {}
+    "/Users/muiz_eddy/Documents/personalProject/CRM-CLONE/crm-backend/crmbackend.csproj": {}
   },
   "projects": {
-    "/Users/muiz_eddy/Documents/personalProject/CRM-CLONE/backend/crmbackend/crmbackend.csproj": {
+    "/Users/muiz_eddy/Documents/personalProject/CRM-CLONE/crm-backend/crmbackend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/muiz_eddy/Documents/personalProject/CRM-CLONE/backend/crmbackend/crmbackend.csproj",
+        "projectUniqueName": "/Users/muiz_eddy/Documents/personalProject/CRM-CLONE/crm-backend/crmbackend.csproj",
         "projectName": "crmbackend",
-        "projectPath": "/Users/muiz_eddy/Documents/personalProject/CRM-CLONE/backend/crmbackend/crmbackend.csproj",
+        "projectPath": "/Users/muiz_eddy/Documents/personalProject/CRM-CLONE/crm-backend/crmbackend.csproj",
         "packagesPath": "/Users/muiz_eddy/.nuget/packages/",
-        "outputPath": "/Users/muiz_eddy/Documents/personalProject/CRM-CLONE/backend/crmbackend/obj/",
+        "outputPath": "/Users/muiz_eddy/Documents/personalProject/CRM-CLONE/crm-backend/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/muiz_eddy/.nuget/NuGet/NuGet.Config"
@@ -41,6 +41,16 @@
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[7.0.12, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.13, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[7.0.11, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
