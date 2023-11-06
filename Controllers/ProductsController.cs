@@ -8,19 +8,51 @@ namespace BasicApi.Controller;
 [ApiController]
 [Route("[controller]")]
 
-public class ProductsController : ControllerBase {
-    private readonly ApplicationDbContext _context;
-    public ProductsController(ApplicationDbContext context) {
-        _context = context;
-    }
-    [HttpGet]
-    public async Task<ActionResult<IEnumerable<Product>>> GetProducts() {
-      return await _context.Products.ToListAsync();
+public class ProductsController : ControllerBase
+{
+  private readonly ApplicationDbContext _context;
+  public ProductsController(ApplicationDbContext context)
+  {
+    _context = context;
+  }
+  [HttpGet]
+  public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
+  {
+    return await _context.Products.ToListAsync();
+  }
+
+  [HttpPost]
+  public async Task<ActionResult<Product>> AddProduct(Product product)
+  {
+
+    // add new product to DbContext 
+    _context.Products.Add(product);
+
+    //save the changes to database
+    await _context.SaveChangesAsync();
+
+    return CreatedAtAction(nameof(GetProduct), new { id = product.Id }, product);
+  }
+
+  [HttpGet("{id}")]
+  public async Task<ActionResult<Product>> GetProduct(int id)
+  {
+
+    var product = await _context.Products.FindAsync(id);
+
+    if (product == null)
+    {
+      return NotFound();
     }
 
-//    public async Task<IActionResult> AddProduct() {
-
-//    } 
+    return product;
+  }
+  [HttpPost("search")]
+  public async Task<ActionResult<IEnumerable<Product>>> SearchProducts([FromBody] ProductQuery query)
+  {
+    IQueryable<Product> productQuery = _context.Products.AsQueryable();
+    return null;
+  }
 }
 
 

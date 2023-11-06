@@ -1,11 +1,13 @@
 using BasicApi.Models;
 using Microsoft.EntityFrameworkCore;
 
-public class ApplicationDbContext : DbContext {
-  
-  public DbSet<Product> Products {get; set;} 
+public class ApplicationDbContext : DbContext
+{
 
-  public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)  : base(options) {
- 
+  public DbSet<Product> Products { get; set; }
+
+  public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
+  {
+
   }
 }

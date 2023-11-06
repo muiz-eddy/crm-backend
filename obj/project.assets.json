@@ -1447,19 +1447,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/muiz_eddy/.nuget/packages/": {}
+    "/home/muizeddy/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/muiz_eddy/Documents/personalProject/CRM-CLONE/crm-backend/crmbackend.csproj",
+      "projectUniqueName": "/home/muizeddy/project/crmclone/crm-backend/crmbackend.csproj",
       "projectName": "crmbackend",
-      "projectPath": "/Users/muiz_eddy/Documents/personalProject/CRM-CLONE/crm-backend/crmbackend.csproj",
-      "packagesPath": "/Users/muiz_eddy/.nuget/packages/",
-      "outputPath": "/Users/muiz_eddy/Documents/personalProject/CRM-CLONE/crm-backend/obj/",
+      "projectPath": "/home/muizeddy/project/crmclone/crm-backend/crmbackend.csproj",
+      "packagesPath": "/home/muizeddy/.nuget/packages/",
+      "outputPath": "/home/muizeddy/project/crmclone/crm-backend/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/muiz_eddy/.nuget/NuGet/NuGet.Config"
+        "/home/muizeddy/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -1521,7 +1521,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.402/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.113/RuntimeIdentifierGraph.json"
       }
     }
   }
