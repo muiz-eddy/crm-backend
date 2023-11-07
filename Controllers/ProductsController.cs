@@ -51,7 +51,21 @@ public class ProductsController : ControllerBase
   public async Task<ActionResult<IEnumerable<Product>>> SearchProducts([FromBody] ProductQuery query)
   {
     IQueryable<Product> productQuery = _context.Products.AsQueryable();
-    return null;
+
+    if (!string.IsNullOrEmpty(query.Name))
+    {
+      productQuery = productQuery.Where(p => p.Name.Contains(query.Name));
+    }
+    if (query.MinPrice.HasValue)
+    {
+      productQuery = productQuery.Where(p => p.Price >= query.MinPrice.Value);
+    }
+    if (query.MaxPrice.HasValue)
+    {
+      productQuery = productQuery.Where(p => p.Price <= query.MaxPrice.Value);
+    }
+    var products = await productQuery.ToListAsync();
+    return Ok(products);
   }
 }
 
