@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-using BasicApi.Models;
+using MenuApi.Models;
 using Microsoft.EntityFrameworkCore;
-using System.Runtime.CompilerServices;
 
 namespace BasicApi.Controller;
 
@@ -20,7 +19,7 @@ public class ProductsController : ControllerBase
   {
     return await _context.Products.ToListAsync();
   }
-  /**/
+  /**/ //this is synchronous method, meaning it will this is only doing one at atime (not parallel)
   /* [HttpPost] */
   /* public ActionResult<Product> Create(Product product) */
   /* { */

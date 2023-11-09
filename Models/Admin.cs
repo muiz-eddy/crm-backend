@@ -1,4 +1,4 @@
-namespace BasicApi.Models;
+namespace AdminApi.Models;
 
 public class Admin
 {
