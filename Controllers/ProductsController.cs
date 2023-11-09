@@ -20,11 +20,21 @@ public class ProductsController : ControllerBase
   {
     return await _context.Products.ToListAsync();
   }
+  /**/
+  /* [HttpPost] */
+  /* public ActionResult<Product> Create(Product product) */
+  /* { */
+  /*   product.Id = _context.Products.Any() ? _context.Products.Max(p => p.Id) + 1 : 1; */
+  /*   _context.Products.Add(product); */
+  /**/
+  /*   return CreatedAtAction(nameof(GetProduct), new { id = product.Id }, product); */
+  /* } */
 
   [HttpPost]
+  [ProducesResponseType(StatusCodes.Status201Created)]
+  [ProducesResponseType(StatusCodes.Status400BadRequest)]
   public async Task<ActionResult<Product>> AddProduct(Product product)
   {
-
     // add new product to DbContext 
     _context.Products.Add(product);
 
@@ -33,7 +43,6 @@ public class ProductsController : ControllerBase
 
     return CreatedAtAction(nameof(GetProduct), new { id = product.Id }, product);
   }
-
   [HttpGet("{id}")]
   public async Task<ActionResult<Product>> GetProduct(int id)
   {
@@ -54,7 +63,7 @@ public class ProductsController : ControllerBase
 
     if (!string.IsNullOrEmpty(query.Name))
     {
-      productQuery = productQuery.Where(p => p.Name.Contains(query.Name));
+      productQuery = productQuery.Where(p => p.Name.ToLower().Contains(query.Name.ToLower()));
     }
     if (query.MinPrice.HasValue)
     {
