@@ -1,6 +1,6 @@
 namespace AdminApi.Models;
 
-public class Admin
+public class AdminClass
 {
   public int Id { get; set; }
   public string? Email { get; set; }

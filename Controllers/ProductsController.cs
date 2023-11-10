@@ -6,7 +6,6 @@ namespace BasicApi.Controller;
 
 [ApiController]
 [Route("[controller]")]
-
 public class ProductsController : ControllerBase
 {
   private readonly ApplicationDbContext _context;
@@ -62,7 +61,7 @@ public class ProductsController : ControllerBase
 
     if (!string.IsNullOrEmpty(query.Name))
     {
-      productQuery = productQuery.Where(p => p.Name.ToLower().Contains(query.Name.ToLower()));
+      productQuery = productQuery.Where(p => p.Name != null && p.Name.ToLower().Contains(query.Name.ToLower()));
     }
     if (query.MinPrice.HasValue)
     {
@@ -78,16 +77,3 @@ public class ProductsController : ControllerBase
 }
 
 
-// public class ProductsController : ControllerBase {
-//     private static readonly List<Product> Products = new List<Product>{
-//         new() {Id = 1, Name = "Laptop", Price = 999.95M },
-//         new() {Id = 3, Name = "Mouse", Price = 999.95M},
-//     };
-
-//     [HttpGet]
-//     public IEnumerable<Product> Get() {
-//         return Products;
-//     }
-
-//     //Additional CRUD Operations can be added here (POST, PUT, DELETE)
-// }
